@@ -1,40 +1,36 @@
 //Relogio.java 
 	
 public class Relogio { 
-	private int segDesdeMeiaNoite
-	/*	private	int seg = segDesdeMeiaNoite % 60; // Segundos
-		private	int minuto = 
-		private	int horas = segDesdeMeiaNoite / 3600 // Horas, validar quando for 86400
-	*/
-	public Relogio(int hora, int minuto, int segundo){  // CONSTRUTOR 
+	private int segDesdeMeiaNoite;
+	
+	public Relogio(int hora, int minuto, int segundo){  // CONSTRUTOR DO OBJETO 
 		setHora(hora);
 		setMinuto(minuto);
 		setSegundo(segundo);
 	}
 	
 	// Setters & Getter's 
-	
-	public void setHora(int hora){// Todo set tem que ser void, void é quando não é necessário return.
-		int h = (hora >= 0 && hora <= 23 ? hora:0;)
-
-		this.segDesdeMeiaNoite = h * 60 * 60
+	public void setHora(int hora){
+		this.segDesdeMeiaNoite = 0;
+		int h = (hora >= 0 && hora <= 23 ? hora:0); // 13
+		this.segDesdeMeiaNoite += h * 60 * 60; // 46.800
 	}
 	public int getHora(){
-		return this.seg / 3600;
+		return this.segDesdeMeiaNoite / 3600;
 	}
 	public void setMinuto(int minuto){
-		//this.minuto = (minuto >= 0 && minuto <= 59 ? minuto: 0);
+		int m = (minuto >= 0 && minuto <= 59 ? minuto: 0); // 27
+		this.segDesdeMeiaNoite += m * 60;// + 1.620
 	}
 	public int getMinuto(){
-		return 0;
-		//return this.minuto;
+		return (this.segDesdeMeiaNoite % 3600) / 60;
 	}
 	public void setSegundo(int segundo){
-		//this.segundo = (segundo >= 0 && segundo <= 59 ? segundo: 0);
+		int s = (segundo >= 0 && segundo <= 59 ? segundo: 0); // 6
+		this.segDesdeMeiaNoite += s; // + 6
 	}
 	public int getSegundo(){
-		return 0;
-		//return this.segundo;
+		return this.segDesdeMeiaNoite % 60;
 	}
 	public String toString(){
 		return String.format("%02d:%02d:%02d",
