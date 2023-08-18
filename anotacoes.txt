@@ -1,0 +1,4 @@
+ENCAPSULAMENTO - OCULTAR A REPRESENTAÇÃO INTERNA DE UM OBJETO
+    - Restringir acesso a atributos
+    - Ocultar implementação de operações por meio de métodos
+    - Ocultar operações de uso interno
