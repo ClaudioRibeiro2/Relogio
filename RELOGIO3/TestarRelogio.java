@@ -13,13 +13,18 @@ public class TestarRelogio {
 		relogio1.setMinuto(0);
 		relogio1.setSegundo(45);
 
-		// continua no próximo slide
 		System.out.printf("%nRelógio 1 alterado para: %s%n", relogio1);
 		System.out.printf("Relógio 2 alterado para: %s%n", relogio2);
 
 		relogio2.setHora(18);
 		relogio2.setMinuto(54);
 		relogio2.setSegundo(37);
+		
+		System.out.printf("%nRelógio 1 alterado para: %s%n", relogio1);
+		System.out.printf("Relógio 2 alterado para: %s%n", relogio2);
+		
+		relogio1.setHora(18);
+		relogio2.setMinuto(06);
 		
 		System.out.printf("%nRelógio 1 alterado para: %s%n", relogio1);
 		System.out.printf("Relógio 2 alterado para: %s%n", relogio2);
